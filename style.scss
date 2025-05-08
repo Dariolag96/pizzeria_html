@@ -1,0 +1,179 @@
+$primary-color: #d35400;
+$secondary-color: #f39c12;
+$background-color: #fff8f0;
+$text-color: #333;
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  padding-top: 60px;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $primary-color;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.header {
+  text-align: center;
+
+  padding: {
+    left: 1rem;
+    right: 1rem
+  }
+
+  ;
+
+  margin-top: 5rem;
+
+  &__title {
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
+}
+
+// ABOUT
+.about {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 0 1rem;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    color: darken($text-color, 10%);
+  }
+}
+
+
+.menu-toggle {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+
+  &__item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    h3 {
+      margin: 0 0 0.5rem 0;
+      color: $primary-color;
+    }
+
+    p {
+      margin: 0.25rem 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+
+    &__toggle {
+      display: block;
+    }
+
+    &__links {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      margin-top: 1rem;
+
+      &.active {
+        display: flex;
+      }
+
+      li {
+        text-align: left;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    margin-top: 6rem;
+  }
+}

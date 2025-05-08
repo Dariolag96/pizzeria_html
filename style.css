@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  padding-top: 60px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #d35400;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar__links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar__links li a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 5rem;
+}
+.header__title {
+  font-size: 2.5rem;
+  color: #d35400;
+}
+
+.about {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 0 1rem;
+}
+.about__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about__description {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+.menu-toggle {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+}
+.menu__item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.menu__item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #d35400;
+}
+.menu__item p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+.menu--hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar__toggle {
+    display: block;
+  }
+  .navbar__links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 1rem;
+  }
+  .navbar__links.active {
+    display: flex;
+  }
+  .navbar__links li {
+    text-align: left;
+    padding: 0.5rem 0;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header {
+    margin-top: 6rem;
+  }
+}/*# sourceMappingURL=style.css.map */
